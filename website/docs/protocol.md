@@ -39,27 +39,76 @@ LLM-generated mutations are a meaningful measurement tool for this problem becau
 
 ### 1.2 Why This Matters
 
-> TO BE FILLED — see Phase R1.2 of the research plan
->
-> _What this section should contain: Motivation for why detection content robustness is an understudied problem worth a formal empirical study. Who is harmed by brittle rules. What the practical stakes are for defenders. Should be grounded in observable phenomena, not speculation._
+Public detection content is part of the practical infrastructure of modern defense. Detection engineers routinely adapt community and vendor-published rules instead of writing every rule from first principles. Projects such as [SigmaHQ](https://github.com/SigmaHQ/sigma), [Elastic Detection Rules](https://github.com/elastic/detection-rules), and [Splunk Security Content](https://github.com/splunk/security_content) explicitly support this reuse by publishing rule content, contribution workflows, testing conventions, and mappings to broader defensive taxonomies such as MITRE ATT&CK.
+
+The practical risk is not merely that a rule may be wrong. The more specific risk is that a rule may be correct for the artifact it was written against but fragile under routine variation: renamed files, reordered command arguments, alternate scripting syntax, changed encodings, different parent processes, equivalent API usage, modified string literals, or different but behaviorally equivalent execution paths. A defender who imports such a rule may believe they have coverage for a behavior while actually having coverage for one narrow representation of that behavior.
+
+This matters most for defenders with limited detection-engineering capacity. Public rules are valuable because they compress expert knowledge into reusable artifacts, but their reuse also creates dependency on quality properties that are rarely measured consistently across repositories. If robustness is not measured, teams cannot easily prioritize which rules need hardening, which rule formats or repositories tend to encode more durable logic, or which failure modes should be addressed by rule-authoring guidance.
+
+BrittleBench therefore treats robustness as a measurable property of detection content, not as an anecdotal criticism of individual rule authors. The intended benefit is constructive: help detection engineers understand where public rules generalize, where they fail, and what kinds of rule structures are most exposed to functionally equivalent variation.
 
 ### 1.3 Prior Work Survey
 
-> TO BE FILLED — see Phase R1.3 of the research plan
->
-> _What this section should contain: A structured survey of prior work covering: (a) empirical studies of detection rule quality, (b) LLM-based attack mutation literature, (c) benchmark methodology in adjacent fields (software testing, ML robustness), (d) detection content repositories and their stated coverage goals. Minimum 10 cited works. Identify what each does and does not cover._
+This section records the starting prior-work map for Phase R1. It is not yet the final bibliography. The purpose is to establish that BrittleBench is adjacent to several existing bodies of work but is not duplicative of them.
+
+| Area | Source | What it contributes | What it does not cover |
+|------|--------|---------------------|------------------------|
+| Public log-detection rules | [SigmaHQ/sigma](https://github.com/SigmaHQ/sigma) | Defines a large public corpus of vendor-agnostic log detection rules. The repository describes Sigma as a generic signature format for log events and states that the main rule repository is intended for detection engineers and threat hunters. | Does not provide a benchmark for whether rules remain effective under functionally equivalent mutations of the target behavior. |
+| Public Elastic rules | [Elastic Detection Rules](https://github.com/elastic/detection-rules) | Provides public Elastic Security rules and a detection-as-code workflow for rule development, maintenance, testing, validation, and release. | Focuses on Elastic's rule lifecycle and validation tooling, not cross-repository robustness under semantic variation. |
+| Public Splunk rules | [Splunk Security Content](https://github.com/splunk/security_content) | Provides Analytic Stories, detections, attack data, and contentctl tooling; the repository explicitly connects content to ATT&CK, Cyber Kill Chain, and CIS Controls. | Does not provide a cross-format benchmark for rule brittleness against validated equivalent variants. |
+| File and malware signatures | [YARA documentation](https://yara.readthedocs.io/en/latest/) | Defines YARA as a rule language for identifying and classifying samples using textual or binary patterns plus Boolean logic. | Describes rule semantics and usage, but not a large-scale benchmark of public YARA rule robustness under mutation. |
+| Detection-rule evolution | [Long and Evans, "Evolution of Log-Based Detection Rules in Public Repositories" (2026)](https://arxiv.org/abs/2605.05383) | Studies longitudinal evolution of Sigma and Splunk Security Content rules, including detection logic changes over time. It establishes that public detection rules evolve through operational trade-offs. | Analyzes rule history and revision behavior, not whether rules detect behavior-preserving variants generated after publication. |
+| YARA effectiveness | [Pendlebury et al., "Assessing the Effectiveness of YARA Rules for Signature-Based Malware Detection and Classification" (2021)](https://arxiv.org/abs/2111.13910) | Evaluates YARA rules as signature-based malware detection/classification artifacts. It is directly relevant to measuring rule effectiveness rather than assuming it. | Focuses on YARA and malware classification effectiveness, not public multi-format detection robustness against LLM-generated functional variants. |
+| YARA ecosystem quality | [Esteban et al., "Mining the YARA Ecosystem" (2026)](https://arxiv.org/abs/2603.14191) | Mines public YARA repositories at large scale and studies ecosystem structure, maintenance, syntactic quality, and operational reliability. | Studies YARA ecosystem health and quality, but not comparable robustness across Sigma, Elastic, Splunk, and YARA under a shared mutation methodology. |
+| LLM-assisted rule generation | [RuleLLM, "Automatically Generating Rules of Malicious Software Packages via Large Language Model" (2025)](https://arxiv.org/abs/2504.17198) | Shows that LLMs can be used to generate YARA and Semgrep-style rules from malicious package evidence. | Addresses rule generation, not mutation-based stress testing of existing public detection rules. |
+| LLM-assisted obfuscation | [Coppolino et al., "Can LLMs Obfuscate Code?" (2024)](https://arxiv.org/abs/2412.16135) | Studies whether LLMs can generate obfuscated assembly code, supporting the broader premise that LLMs can transform code-like artifacts. | Focuses on code obfuscation capability, not validated functional equivalence of attack artifacts or detection-rule robustness. |
+| Attack behavior taxonomy | [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/) | Provides a widely used taxonomy for adversary tactics and techniques that detection repositories commonly map to. | ATT&CK is a behavior taxonomy, not an evaluation protocol for rule robustness or mutation resistance. |
+| Artifact reproducibility | [ACM Artifact Review and Badging](https://www.acm.org/publications/policies/artifact-review-and-badging-current) | Provides artifact-review concepts relevant to packaging code, data, and computational results for external review. | Does not define security-specific mutation methodology or detection-rule scoring. |
+| Data stewardship | [FAIR Principles](https://www.go-fair.org/fair-principles/) | Provides general principles for making data findable, accessible, interoperable, and reusable. | Does not resolve dual-use release constraints for security datasets containing raw mutation artifacts. |
+
+The main conclusion from this survey is that public detection content, detection-as-code workflows, YARA effectiveness, rule evolution, LLM-assisted security work, and reproducibility standards are all active areas. The missing piece is an explicitly pre-registered, multi-format benchmark that asks whether public detection rules continue to detect validated functionally equivalent variants of the behaviors they claim to cover.
 
 ### 1.4 Gap This Study Fills
 
-> TO BE FILLED — see Phase R1.4 of the research plan
->
-> _What this section should contain: Explicit statement of the gap identified from 1.3. What no prior study has measured, and why that gap matters. Should directly map to the primary research question in Section 2.1._
+BrittleBench fills the gap between rule-quality studies and mutation-based robustness testing. Existing work shows that public detection rules are important, widely reused, and actively maintained; some work studies YARA effectiveness or the evolution of log-based rules over time. However, the prior-work map does not identify a public, pre-registered benchmark that measures whether detection rules across multiple public repositories continue to fire when the target behavior is transformed into validated functionally equivalent variants.
+
+The specific gap is therefore:
+
+> Public detection content lacks a cross-format empirical robustness benchmark that measures rule behavior under validated behavior-preserving mutations of the attacks or artifacts those rules are intended to detect.
+
+This gap matters because a rule can pass ordinary validation against its original example while still failing under small, practical, non-novel variations of that example. A benchmark focused on this property would let the study report robustness distributions, compare rule families or repositories, identify recurring brittleness patterns, and provide concrete guidance for future detection authoring. The primary research question in Section 2.1 should directly ask how robust public detection rules are under validated functionally equivalent mutation, with secondary questions decomposing that result by format, repository, rule characteristics, and attack category.
 
 ### 1.5 Scope Boundaries
 
-> TO BE FILLED — see Phase R1.5 of the research plan
->
-> _What this section should contain: Explicit in-scope and out-of-scope boundaries. Which rule formats are included (Sigma, YARA, Elastic, Splunk, other?). Which repositories. Which attack categories. Which threat model. These boundaries must be stable before Phase E begins — they define the corpus sampling frame._
+This Phase R1 scope is intentionally narrow enough for a solo six-month study and broad enough to support the core claim. Final sampling details, including exact repository snapshots and inclusion/exclusion counts, are deferred to Section 5.2.
+
+In scope:
+
+- Publicly accessible detection content whose source rules can be downloaded, versioned, and cited.
+- Rule formats initially considered: Sigma YAML, YARA rules, Elastic detection rules, and Splunk Security Content detections.
+- Public repositories initially considered: SigmaHQ/sigma, Elastic detection-rules, Splunk security_content, and selected public YARA rule repositories or corpora to be specified in Section 5.2.
+- Rules associated with a concrete observable behavior, artifact, command, file pattern, process activity, registry activity, network event, or malware/sample family where a ground-truth positive example can be obtained or constructed under the ethical constraints in Section 8.
+- Mutations that preserve the attacker-relevant behavior of the original example while changing non-essential implementation details.
+- Defensive evaluation of whether existing rules fire on original examples and validated equivalent variants.
+- Aggregate reporting by rule format, repository, rule characteristics, and attack category, subject to the statistical plan in Sections 3 and 5.
+
+Out of scope:
+
+- Proprietary rules that cannot be legally accessed, snapshotted, or redistributed as part of the study record.
+- Closed-source vendor rule sets, managed-service-only rules, or customer-private detections unless a public, citable source is available and Section 5.2 explicitly includes them.
+- Novel attack technique discovery, exploit development, malware improvement, or publication of weaponizable mutation payloads.
+- Claims about all detection engineering globally. The study will generalize only to the sampled public corpus at the recorded snapshot date.
+- Runtime evaluation against production SIEMs, EDRs, or live enterprise environments.
+- Measuring false-positive rates in benign enterprise telemetry, unless later added as an explicitly exploratory analysis after protocol lock.
+- Ranking or shaming individual rule authors.
+
+Threat model boundary:
+
+The mutation threat model is an attacker, red-team operator, or tool-assisted operator who already knows a public technique or artifact and can vary non-essential surface details without changing the underlying behavior. The study does not model a fully adaptive attacker with feedback from the exact target environment, and it does not model discovery of new offensive capabilities.
+
+Execution boundary:
+
+No corpus collection, mutation generation, evaluator implementation, or analysis code may begin until this protocol is complete, pre-registered, and locked in Section 9.1. The scope above constrains later design work, but Sections 4 and 5 must still operationalize exact definitions, sampling, variables, and scoring before execution begins.
 
 ---
 

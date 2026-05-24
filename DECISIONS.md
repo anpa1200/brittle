@@ -57,3 +57,26 @@ Each entry uses the following structure:
 - Protocol written concurrently with implementation — rejected because it defeats the purpose; the temptation to adjust the protocol to match emerging results is too high.
 
 **Implications:** No execution-phase directories or code may exist in this repository until PROTOCOL.md Section 9.1 reads LOCKED. This is enforced by convention (see [future-execution/README.md](future-execution/README.md)) and by the structure of this repository.
+
+---
+
+### DEC-0002 — Set initial public detection content scope for Phase R1
+
+| Field | Value |
+|-------|-------|
+| ID | DEC-0002 |
+| Date | 2026-05-24 |
+| Status | ADOPTED |
+| Supersedes | — |
+| Superseded by | — |
+
+**Decision:** Phase R1 scope is limited to publicly accessible detection content, initially considering Sigma YAML, YARA rules, Elastic detection rules, and Splunk Security Content detections; proprietary or closed vendor rule sets remain out of scope unless Section 5.2 explicitly includes a public, citable source.
+
+**Rationale:** The project needs a corpus that can be snapshotted, cited, reviewed, and partially released without special access. Public repositories also match the study's central claim: defenders reuse public detection content as shared security knowledge. Keeping the initial scope to public content reduces legal, reproducibility, and disclosure complexity for a solo six-month study.
+
+**Alternatives considered:**
+- Include all vendor and managed-service detections — rejected for Phase R1 because access, licensing, redistribution, and disclosure constraints would dominate the protocol before the public-content question is defined.
+- Limit the study only to Sigma — rejected because the project goal is a cross-format robustness benchmark, and restricting to one format would not test whether brittleness patterns differ across common public detection ecosystems.
+- Include execution telemetry and false-positive measurement now — rejected for Phase R1 because it requires environment-specific benign data and would expand the study beyond robustness against behavior-preserving mutation.
+
+**Implications:** Section 5.2 must turn this boundary into an exact sampling frame and must resolve OQ-0003 and OQ-0004 before execution begins. Section 8 must define how raw mutation artifacts are restricted while sanitized benchmark metadata remains publishable.
