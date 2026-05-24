@@ -24,6 +24,14 @@ build/
 .hypothesis/
 .ipynb_checkpoints/
 
+# Node / Docusaurus
+node_modules/
+.docusaurus/
+.cache/
+website/build/
+website/.docusaurus/
+website/node_modules/
+
 # macOS
 .DS_Store
 .AppleDouble

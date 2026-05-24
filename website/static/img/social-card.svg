@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#101820"/>
+  <text x="90" y="230" fill="#f6f8fa" font-family="Arial, sans-serif" font-size="96" font-weight="700">BrittleBench</text>
+  <text x="90" y="315" fill="#63c5da" font-family="Arial, sans-serif" font-size="42" font-weight="700">A Defender's Audit of Public Detection Content Robustness</text>
+  <text x="90" y="410" fill="#c2ccd6" font-family="Arial, sans-serif" font-size="34">Protocol-first empirical security research</text>
+  <rect x="90" y="480" width="250" height="14" fill="#63c5da"/>
+</svg>
