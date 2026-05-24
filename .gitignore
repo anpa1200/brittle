@@ -18,14 +18,23 @@ dist/
 build/
 *.egg-info/
 
+# Test and tool caches
+.tox/
+.nox/
+.hypothesis/
+.ipynb_checkpoints/
+
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # Editors
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
 
 # Secrets and local configuration
 .env
@@ -34,12 +43,25 @@ build/
 *.pem
 credentials*
 secrets*
+*.token
+*.secret
 
 # Local-only data and caches
 data/cache/
 tmp/
 *.tmp
 tmp/*.parquet
+*.sqlite
+*.db
+
+# Execution outputs should be introduced deliberately after protocol lock.
+corpus/
+mutations/
+evaluators/
+results/
+dataset/
+analysis/
+cli/
 
 # LaTeX and paper build artifacts
 paper/build/
@@ -54,3 +76,10 @@ paper/build/
 *.run.xml
 *.synctex.gz
 *.toc
+
+# OS and archive noise
+Thumbs.db
+*.zip
+*.tar
+*.tar.gz
+*.tgz

@@ -1,0 +1,78 @@
+# Suggested repository labels.
+# Apply manually or with a label-sync tool after repository setup.
+
+- name: phase:R0
+  color: "6f42c1"
+  description: Repository scaffold
+- name: phase:R1
+  color: "6f42c1"
+  description: Problem definition
+- name: phase:R2
+  color: "6f42c1"
+  description: Research questions
+- name: phase:R3
+  color: "6f42c1"
+  description: Hypotheses
+- name: phase:R4
+  color: "6f42c1"
+  description: Definitions and operationalization
+- name: phase:R5
+  color: "6f42c1"
+  description: Methodology design
+- name: phase:R6
+  color: "6f42c1"
+  description: Evidence and validation
+- name: phase:R7
+  color: "6f42c1"
+  description: Threats to validity
+- name: phase:R8
+  color: "6f42c1"
+  description: Ethics and responsible research
+- name: phase:R9
+  color: "6f42c1"
+  description: Protocol lock
+- name: type:research
+  color: "1f883d"
+  description: Research writing or review
+- name: type:documentation
+  color: "0969da"
+  description: Repository documentation
+- name: type:decision
+  color: "bf8700"
+  description: Requires DECISIONS.md entry
+- name: type:open-question
+  color: "d1242f"
+  description: Tracks OPEN-QUESTIONS.md item
+- name: type:ethics
+  color: "8250df"
+  description: Responsible research or disclosure work
+- name: type:reproducibility
+  color: "0a7f83"
+  description: Reproducibility or artifact work
+- name: type:execution
+  color: "fbca04"
+  description: Post-lock execution task
+- name: type:analysis
+  color: "54aeff"
+  description: Analysis task
+- name: type:publication
+  color: "c297ff"
+  description: Publication or release task
+- name: priority:P0
+  color: "d1242f"
+  description: Blocks protocol lock or publication
+- name: priority:P1
+  color: "fbca04"
+  description: Important current-phase work
+- name: priority:P2
+  color: "ddf4ff"
+  description: Useful but not immediately blocking
+- name: blocked
+  color: "000000"
+  description: Cannot proceed until dependency is resolved
+- name: needs-decision
+  color: "bf8700"
+  description: Needs explicit methodological decision
+- name: needs-review
+  color: "0969da"
+  description: Needs human review before close
