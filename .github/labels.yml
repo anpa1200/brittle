@@ -31,6 +31,39 @@
 - name: phase:R9
   color: "6f42c1"
   description: Protocol lock
+- name: phase:E1
+  color: "fbca04"
+  description: Corpus collection
+- name: phase:E2
+  color: "fbca04"
+  description: Ground-truth sample acquisition
+- name: phase:E3
+  color: "fbca04"
+  description: Mutation generation
+- name: phase:E4
+  color: "fbca04"
+  description: Evaluation pipeline
+- name: phase:A1
+  color: "54aeff"
+  description: Data quality and cleaning
+- name: phase:A2
+  color: "54aeff"
+  description: Statistical analysis
+- name: phase:A3
+  color: "54aeff"
+  description: Findings draft
+- name: phase:P1
+  color: "c297ff"
+  description: Internal review
+- name: phase:P2
+  color: "c297ff"
+  description: External review
+- name: phase:P3
+  color: "c297ff"
+  description: Artifact release
+- name: phase:P4
+  color: "c297ff"
+  description: Publication
 - name: type:research
   color: "1f883d"
   description: Research writing or review
