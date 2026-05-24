@@ -21,7 +21,17 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'he'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      he: {
+        label: 'עברית',
+        direction: 'rtl',
+      },
+    },
   },
 
   presets: [
@@ -50,6 +60,10 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'mainSidebar',

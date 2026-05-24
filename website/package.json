@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "docusaurus start --host 0.0.0.0",
+    "start:he": "docusaurus start --host 0.0.0.0 --locale he",
     "build": "docusaurus build",
+    "build:en": "docusaurus build --locale en",
+    "build:he": "docusaurus build --locale he",
     "serve": "docusaurus serve --host 0.0.0.0",
     "clear": "docusaurus clear"
   },
