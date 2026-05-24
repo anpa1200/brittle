@@ -4,7 +4,9 @@ title: Glossary
 
 # Glossary
 
-הטבלה שומרת מונחים מקצועיים באנגלית בכוונה.
+הטבלה שומרת מונחים מקצועיים באנגלית בכוונה. בעברית מוסיפים הסבר, לא מחליפים את
+המונח. זה חשוב במיוחד במונחים כמו `firewall`, `EDR`, `SIEM`, `detection rules`,
+`mutation`, `robustness`, `ground truth`, `false positive` ו-`false negative`.
 
 | Term | תיאור |
 |------|-------|
@@ -16,5 +18,11 @@ title: Glossary
 | ground truth sample | דוגמה חיובית שאמורה להפעיל את ה-rule לפי scope המחקר. |
 | evaluator | רכיב post-lock שיריץ rules מול samples או mutations לפי ה-protocol. |
 | unit of analysis | היחידה הסטטיסטית המרכזית: למשל rule, rule+mutation או rule set. |
+| SIEM | מערכת שמרכזת logs ו-security events ומשמשת ל-detection, investigation ו-response workflows. |
+| EDR | endpoint security platform שמנטרת endpoints, processes, files ו-behavior לצורך detection ו-response. |
+| firewall | רכיב network או host security שמבקר traffic לפי policy. |
+| false positive | מצב שבו detection מסמן פעילות כחשודה למרות שהיא benign. |
+| false negative | מצב שבו detection לא מזהה פעילות שהייתה אמורה להיות detected. |
+| ATT&CK | MITRE ATT&CK taxonomy להתנהגויות וטכניקות adversary. |
 
 ה-definitions המחייבים יופיעו ב-Protocol Phase R4.

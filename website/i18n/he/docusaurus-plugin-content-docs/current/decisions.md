@@ -16,7 +16,24 @@ title: Decisions
 ## החלטות קיימות
 
 - **DEC-0001:** adopt pre-registered research protocol; lock before execution.
+  ההחלטה הזו אומרת שאין corpus collection, mutation generation, evaluator או
+  analysis לפני שה-protocol ננעל.
 - **DEC-0002:** set initial public detection content scope for Phase R1.
+  ההחלטה הזו מגבילה את ה-scope הראשוני ל-public detection content שאפשר לבצע לו
+  snapshot, לצטט אותו, ולנתח אותו בלי גישה proprietary.
+
+## מתי מוסיפים DEC חדש
+
+מוסיפים entry חדש כאשר מתקבלת החלטה שמשנה את המחקר:
+
+- בחירת rule formats או repositories.
+- הגדרת functional equivalence.
+- הגדרת robustness score.
+- בחירת sampling strategy.
+- בחירת statistical methods.
+- החלטות disclosure או dataset sanitization.
+
+לא מספיק לכתוב את ההחלטה ב-issue. היא חייבת להופיע גם ב-`DECISIONS.md`.
 
 ## Canonical Source
 

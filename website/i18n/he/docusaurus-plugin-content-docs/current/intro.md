@@ -6,12 +6,24 @@ slug: /
 
 # BrittleBench
 
-BrittleBench הוא research project שבודק את ה-robustness של public detection rules
-מול validated, functionally equivalent mutations של ההתנהגויות שה-rules אמורים
-לזהות.
+BrittleBench הוא research project שבודק את ה-robustness של public detection
+rules מול validated, functionally equivalent mutations של ההתנהגויות שה-rules
+אמורים לזהות. המטרה היא להבין האם public detection content באמת מכליל מעבר
+לדוגמה המקורית שעליה ה-rule נכתב, או שהוא מזהה רק surface form צר מאוד.
 
-הפרויקט נמצא כרגע ב-**Phase R1 - Problem Definition**. אין להוסיף execution-phase
-code או data עד שה-research protocol ננעל.
+הפרויקט נמצא כרגע ב-**Phase R1 - Problem Definition**. המשמעות המעשית היא
+שעדיין לא בונים corpus, mutation pipeline, evaluator, dataset או analysis code.
+קודם כותבים ונועלים research protocol. רק אחרי lock עוברים ל-execution.
+
+## למה הפרויקט קיים
+
+Detection engineers משתמשים הרבה ב-public rules מתוך SigmaHQ, Elastic Detection
+Rules, Splunk Security Content ו-YARA repositories. זה יעיל, אבל יוצר תלות
+באיכות שלא תמיד נמדדת: האם ה-rule מזהה behavior, או רק string, command line,
+file name, registry path או artifact ספציפי?
+
+BrittleBench מתייחס לזה כאל שאלה אמפירית. במקום להניח ש-rule טוב או רע, המחקר
+יבדוק אותו מול variants שעברו validation של functional equivalence.
 
 ## מצב נוכחי
 
@@ -22,9 +34,10 @@ code או data עד שה-research protocol ננעל.
 
 ## מונחים מקצועיים
 
-בגרסה העברית לא מתורגמים מונחים מקצועיים כמו `detection rules`, `robustness`,
-`mutation`, `LLM`, `benchmark`, `protocol`, `corpus`, `evaluator`, `dataset`,
-`analysis`, `Sigma`, `YARA`, `Elastic` ו-`Splunk`.
+בגרסה העברית לא מתורגמים מונחים מקצועיים כמו `firewall`, `EDR`, `SIEM`,
+`detection rules`, `robustness`, `mutation`, `LLM`, `benchmark`, `protocol`,
+`corpus`, `evaluator`, `dataset`, `analysis`, `Sigma`, `YARA`, `Elastic`,
+`Splunk`, `ATT&CK`, `false positive`, `false negative`, `ground truth` ו-`sample`.
 
 ## Guardrail
 

@@ -17,6 +17,18 @@ https://github.com/users/anpa1200/projects/3
 - **A1-A3:** analysis ו-findings.
 - **P1-P4:** review, release ו-publication.
 
+## איך משתמשים בלוח
+
+כל issue צריך לייצג task ברור עם acceptance criteria. כאשר task משנה את
+המתודולוגיה, צריך לעדכן גם `DECISIONS.md`. כאשר task פותח או סוגר שאלה, צריך
+לעדכן גם `OPEN-QUESTIONS.md`.
+
+ה-Project status אמור לשקף את המציאות:
+
+- `Todo`: task קיים אבל עדיין לא התחיל.
+- `In Progress`: task פעיל עכשיו.
+- `Done`: task הושלם, נבדק, ונסגר או לא רלוונטי יותר.
+
 ## Current Active Task
 
 אחרי השלמת Phase R1, המשימה הפעילה היא:
