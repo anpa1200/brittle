@@ -1,0 +1,5 @@
+# Execution-Phase Placeholder
+
+Execution-phase directories such as `corpus/`, `mutations/`, `evaluators/`, `results/`, `dataset/`, `analysis/`, and `cli/` are intentionally absent.
+
+They will be created only after [PROTOCOL.md](PROTOCOL.md) Section 9.1 reads `LOCKED`. Until then, this repository contains research protocol scaffolding only.
