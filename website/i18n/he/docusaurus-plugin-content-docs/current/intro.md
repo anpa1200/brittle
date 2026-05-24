@@ -6,14 +6,14 @@ slug: /
 
 # BrittleBench
 
-BrittleBench הוא research project שבודק את ה-robustness של public detection
+BrittleBench הוא פרויקט מחקר שבודק את ה-robustness של public detection
 rules מול validated, functionally equivalent mutations של ההתנהגויות שה-rules
 אמורים לזהות. המטרה היא להבין האם public detection content באמת מכליל מעבר
 לדוגמה המקורית שעליה ה-rule נכתב, או שהוא מזהה רק surface form צר מאוד.
 
-הפרויקט נמצא כרגע ב-**Phase R1 - Problem Definition**. המשמעות המעשית היא
+הפרויקט נמצא כרגע ב-**שלב R1 - הגדרת הבעיה**. המשמעות המעשית היא
 שעדיין לא בונים corpus, mutation pipeline, evaluator, dataset או analysis code.
-קודם כותבים ונועלים research protocol. רק אחרי lock עוברים ל-execution.
+קודם כותבים ונועלים research protocol. רק אחרי נעילה עוברים ל-execution.
 
 ## למה הפרויקט קיים
 
@@ -27,10 +27,10 @@ BrittleBench מתייחס לזה כאל שאלה אמפירית. במקום לה
 
 ## מצב נוכחי
 
-- canonical protocol: [Protocol](/docs/protocol)
-- research plan: [Research Plan](/docs/research-plan)
-- open methodological questions: [Open Questions](/docs/open-questions)
-- GitHub task pipeline: [GitHub Project Pipeline](/docs/github-project-pipeline)
+- ה-protocol המחייב: [Protocol](/docs/protocol)
+- תוכנית המחקר: [תוכנית מחקר](/docs/research-plan)
+- שאלות מתודולוגיות פתוחות: [שאלות פתוחות](/docs/open-questions)
+- צינור המשימות ב-GitHub: [GitHub Project Pipeline](/docs/github-project-pipeline)
 
 ## מונחים מקצועיים
 
@@ -39,8 +39,8 @@ BrittleBench מתייחס לזה כאל שאלה אמפירית. במקום לה
 `corpus`, `evaluator`, `dataset`, `analysis`, `Sigma`, `YARA`, `Elastic`,
 `Splunk`, `ATT&CK`, `false positive`, `false negative`, `ground truth` ו-`sample`.
 
-## Guardrail
+## כלל בטיחות
 
-האתר הוא documentation surface בלבד. הוא לא משנה את הכלל המרכזי: corpus
+האתר הוא שכבת תיעוד בלבד. הוא לא משנה את הכלל המרכזי: corpus
 collection, mutation generation, evaluators, analysis code ו-results חסומים עד
 ש-`PROTOCOL.md` Section 9.1 מוגדר `LOCKED`.

@@ -1,16 +1,16 @@
 ---
-title: GitHub Project Pipeline
+title: צינור משימות GitHub
 ---
 
-# GitHub Project Pipeline
+# צינור משימות GitHub
 
-ה-GitHub Project מנהל את כל ה-task pipeline מ-Phase R0 עד P4.
+ה-GitHub Project מנהל את כל צינור המשימות משלב R0 עד P4.
 
-## Current Board
+## הלוח הנוכחי
 
 https://github.com/users/anpa1200/projects/3
 
-## Phase Flow
+## זרימת השלבים
 
 - **R0-R9:** protocol, methodology, ethics ו-lock.
 - **E1-E4:** corpus, ground truth, mutations ו-evaluation.
@@ -23,18 +23,18 @@ https://github.com/users/anpa1200/projects/3
 המתודולוגיה, צריך לעדכן גם `DECISIONS.md`. כאשר task פותח או סוגר שאלה, צריך
 לעדכן גם `OPEN-QUESTIONS.md`.
 
-ה-Project status אמור לשקף את המציאות:
+ה-status ב-Project אמור לשקף את המציאות:
 
 - `Todo`: task קיים אבל עדיין לא התחיל.
 - `In Progress`: task פעיל עכשיו.
 - `Done`: task הושלם, נבדק, ונסגר או לא רלוונטי יותר.
 
-## Current Active Task
+## המשימה הפעילה הנוכחית
 
 אחרי השלמת Phase R1, המשימה הפעילה היא:
 
-`R2-001 - Draft Primary Research Question`
+`R2-001 - ניסוח primary research question`
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/GITHUB-PROJECT-PIPELINE.md

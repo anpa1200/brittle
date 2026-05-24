@@ -1,17 +1,17 @@
 ---
-title: Costs
+title: עלויות
 ---
 
-# Project Cost Log
+# יומן עלויות הפרויקט
 
 BrittleBench מוגבל ל-budget קטן. היעד הוא בערך `$350`, עם ceiling של `$500`.
 
-## Categories
+## קטגוריות
 
-- LLM API usage
+- שימוש ב-LLM API
 - infrastructure
-- domain registration
-- miscellaneous
+- רישום domain
+- שונות
 
 ## למה מתעדים cost
 
@@ -27,6 +27,6 @@ breakdown כדי שאפשר יהיה לדווח computational costs בפרסום
 אם running total מתקרב ל-`$400`, צריך לפתוח או לעדכן open question לפני שממשיכים
 להוציא כסף.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/COSTS.md

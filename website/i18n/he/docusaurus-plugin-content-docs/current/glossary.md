@@ -1,14 +1,14 @@
 ---
-title: Glossary
+title: מילון מונחים
 ---
 
-# Glossary
+# מילון מונחים
 
 הטבלה שומרת מונחים מקצועיים באנגלית בכוונה. בעברית מוסיפים הסבר, לא מחליפים את
 המונח. זה חשוב במיוחד במונחים כמו `firewall`, `EDR`, `SIEM`, `detection rules`,
 `mutation`, `robustness`, `ground truth`, `false positive` ו-`false negative`.
 
-| Term | תיאור |
+| מונח | תיאור |
 |------|-------|
 | detection rule | כלל שמזהה observable behavior או artifact מתוך logs, files, process activity, network events וכדומה. |
 | mutation | שינוי של artifact או behavior representation תוך שמירה על attacker-relevant behavior. |
@@ -25,4 +25,4 @@ title: Glossary
 | false negative | מצב שבו detection לא מזהה פעילות שהייתה אמורה להיות detected. |
 | ATT&CK | MITRE ATT&CK taxonomy להתנהגויות וטכניקות adversary. |
 
-ה-definitions המחייבים יופיעו ב-Protocol Phase R4.
+ההגדרות המחייבות יופיעו ב-Protocol בשלב R4.

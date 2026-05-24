@@ -1,8 +1,8 @@
 ---
-title: Contributing
+title: תרומה לפרויקט
 ---
 
-# Contributing
+# תרומה לפרויקט
 
 כרגע BrittleBench נמצא ב-research protocol phase ולכן לא מקבל external
 contributions למתודולוגיה.
@@ -14,10 +14,10 @@ feedback לפני lock, קשה להראות שהמחקר לא הותאם בדי�
 
 אחרי Phase E, כאשר ה-protocol נעול, contributions יהיו רלוונטיות בעיקר ל:
 
-- corpus gaps
-- evaluator bugs
-- tooling improvements
-- dataset feedback
+- פערים ב-corpus
+- bugs ב-evaluator
+- שיפורי tooling
+- feedback על dataset
 
 ## מה לא מתאים כרגע
 
@@ -26,6 +26,6 @@ feedback לפני lock, קשה להראות שהמחקר לא הותאם בדי�
 - שינוי hypotheses או research questions אחרי pre-registration בלי CHANGELOG.
 - פרסום raw mutation artifacts או payloads.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/CONTRIBUTING.md

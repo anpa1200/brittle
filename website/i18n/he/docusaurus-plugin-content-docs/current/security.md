@@ -1,8 +1,8 @@
 ---
-title: Security
+title: אבטחה
 ---
 
-# Security Policy
+# מדיניות אבטחה
 
 אם נמצאת vulnerability ב-future tooling או באופן שבו הפרויקט משתמש ב-dependencies,
 יש לדווח באופן פרטי.
@@ -10,7 +10,7 @@ title: Security
 דוגמאות אפשריות: בעיה ב-parser, חשיפה של secrets, טיפול לא בטוח ב-restricted
 raw data, או vulnerability ב-tooling שמשמש evaluation.
 
-## Contact
+## יצירת קשר
 
 - GitHub: `@anpa1200`
 - Email: `1200km@gmail.com`
@@ -22,6 +22,6 @@ raw data, או vulnerability ב-tooling שמשמש evaluation.
 אם הבעיה שייכת ל-upstream dependency, צריך לתאם עם ה-maintainers של אותו project
 לפני public disclosure.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/SECURITY.md

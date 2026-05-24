@@ -30,24 +30,24 @@ const content = {
     ],
   },
   he: {
-    description: 'מחקר defender-focused על robustness של public detection content',
-    status: 'Phase R1 - Pre-implementation',
-    subtitle: 'מחקר defender-focused על robustness של public detection content.',
+    description: 'מחקר ממוקד defenders על robustness של public detection content',
+    status: 'שלב R1 - לפני implementation',
+    subtitle: 'מחקר ממוקד defenders על robustness של public detection content.',
     summary:
-      'BrittleBench הוא research project למדידת robustness של public Sigma, YARA, Elastic ו-Splunk detection content מול validated, functionally equivalent mutations של ההתנהגויות שה-rules אמורים לזהות.',
+      'BrittleBench הוא פרויקט מחקר למדידת robustness של public Sigma, YARA, Elastic ו-Splunk detection content מול validated, functionally equivalent mutations של ההתנהגויות שה-rules אמורים לזהות.',
     primaryAction: 'קריאת ה-protocol',
-    secondaryAction: 'צפייה ב-task pipeline',
+    secondaryAction: 'צפייה בצינור המשימות',
     focusAreas: [
       {
-        title: 'Protocol first',
+        title: 'קודם protocol',
         text: 'הפרויקט מתחיל ב-research protocol נעול לפני corpus collection, mutation generation, evaluation או analysis.',
       },
       {
-        title: 'Detection robustness',
+        title: 'Robustness של detection',
         text: 'BrittleBench בודק האם public detection rules מכלילים מעבר לייצוג המקורי וממשיכים לזהות functionally equivalent variants.',
       },
       {
-        title: 'Responsible release',
+        title: 'פרסום אחראי',
         text: 'Raw mutation artifacts ו-dual-use details מנוהלים בנפרד מ-sanitized public benchmark outputs.',
       },
     ],

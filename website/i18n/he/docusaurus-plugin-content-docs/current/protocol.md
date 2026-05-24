@@ -4,16 +4,16 @@ title: Protocol
 
 # BrittleBench Research Protocol
 
-זהו עמוד ה-Protocol בגרסה העברית של האתר. ה-canonical protocol נשאר באנגלית.
+זהו עמוד ה-Protocol בגרסה העברית של האתר. ה-protocol המחייב נשאר באנגלית.
 הגרסה העברית נועדה לעזור בקריאה, ניווט ותכנון העבודה, אבל היא לא מחליפה את
 הנוסח המחייב ב-`PROTOCOL.md`.
 
 העיקרון המרכזי: קודם מגדירים את המחקר, אחר כך בונים. כל execution work חסום עד
 ש-Section 9.1 מוגדר `LOCKED`.
 
-## Phase R1 - Problem Definition
+## שלב R1 - הגדרת הבעיה
 
-Phase R1 מגדיר את הבעיה לפני כל execution work. בשלב הזה כבר הוגדרו:
+שלב R1 מגדיר את הבעיה לפני כל execution work. בשלב הזה כבר הוגדרו:
 
 - מהי brittle detection rule.
 - למה public detection content חשוב ל-defenders.
@@ -25,26 +25,26 @@ Phase R1 מגדיר את הבעיה לפני כל execution work. בשלב הז�
 שלו, ולנתח במסגרת מחקרית. זה כולל בתחילה Sigma YAML, YARA rules, Elastic
 detection rules ו-Splunk Security Content detections.
 
-## Phase R2 - Research Questions
+## שלב R2 - שאלות מחקר
 
-Phase R2 יגדיר primary research question ו-secondary research questions. השאלות
+שלב R2 יגדיר primary research question ו-secondary research questions. השאלות
 צריכות להיות falsifiable, answerable from planned data, וצריכות לאפשר null
 result משמעותי.
 
 השאלה המרכזית צריכה להישאר ישירה: עד כמה public detection rules נשארים robust
 מול validated, functionally equivalent mutations של ההתנהגות שהם אמורים לזהות?
 
-## Phase R3 - Hypotheses
+## שלב R3 - Hypotheses
 
-Phase R3 יגדיר hypotheses, null hypotheses, expected effect sizes ו-pre-registered
+שלב R3 יגדיר hypotheses, null hypotheses, expected effect sizes ו-pre-registered
 predictions. אין להתחיל data collection לפני שהחלק הזה מוגדר.
 
 כל hypothesis חייבת להיות קשורה ל-research question, וכל null hypothesis צריכה
 להיות מפורשת. אם התוצאה תהיה null result, היא עדיין צריכה להיות publishable.
 
-## Phase R4 - Definitions and Operationalization
+## שלב R4 - הגדרות ו-operationalization
 
-Phase R4 יגדיר את המונחים הקריטיים:
+שלב R4 יגדיר את המונחים הקריטיים:
 
 - detection rule
 - functional equivalence
@@ -52,37 +52,37 @@ Phase R4 יגדיר את המונחים הקריטיים:
 - brittleness pattern
 - unit of analysis
 
-## Phase R5 - Methodology Design
+## שלב R5 - תכנון methodology
 
-Phase R5 יגדיר sampling strategy, independent variables, dependent variables,
+שלב R5 יגדיר sampling strategy, independent variables, dependent variables,
 control variables, confounders, statistical methods ו-power analysis.
 
 זה השלב שבו החלטות כמו corpus snapshot cutoff date, sample size, rule inclusion
 criteria ו-statistical tests חייבות להפוך מתיאור כללי לתוכנית מדידה.
 
-## Phase R6 - Evidence and Validation
+## שלב R6 - Evidence ו-validation
 
-Phase R6 יגדיר evidence standards, validity mitigations ו-reliability strategy.
+שלב R6 יגדיר evidence standards, validity mitigations ו-reliability strategy.
 
-## Phase R7 - Threats to Validity
+## שלב R7 - איומים על validity
 
-Phase R7 יתעד conclusion validity, internal validity, construct validity,
+שלב R7 יתעד conclusion validity, internal validity, construct validity,
 external validity, ethical validity ו-replication threats.
 
-## Phase R8 - Ethics and Responsible Research
+## שלב R8 - Ethics ומחקר אחראי
 
-Phase R8 יתעד dual-use risk, disclosure approach, no novel-attack policy,
+שלב R8 יתעד dual-use risk, disclosure approach, no novel-attack policy,
 dataset sanitization ו-tone policy.
 
 המחקר לא נועד לפרסם weaponizable payloads, לא לייצר novel attack techniques, ולא
 לדרג או לבייש rule authors. המטרה היא defender benefit.
 
-## Phase R9 - Protocol Status
+## שלב R9 - מצב ה-protocol
 
 ה-protocol נשאר `UNLOCKED` עד שכל sections הושלמו, pre-registration בוצע, ו-Section
 9.1 עודכן ל-`LOCKED`.
 
-## Canonical Source
+## מקור מחייב
 
 לנוסח המחייב והמלא ראו את הקובץ באנגלית:
 

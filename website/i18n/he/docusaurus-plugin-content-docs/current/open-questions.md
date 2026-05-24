@@ -1,22 +1,22 @@
 ---
-title: Open Questions
+title: שאלות פתוחות
 ---
 
-# Open Questions
+# שאלות פתוחות
 
 `OPEN-QUESTIONS.md` שומר שאלות שעדיין לא נכון לפתור. המטרה היא לא לנחש מוקדם מדי.
 
-## Open Questions קיימות
+## שאלות פתוחות קיימות
 
-- **OQ-0001:** LLM provider selection for mutation generation. צריך להחליט לפי
+- **OQ-0001:** בחירת LLM provider עבור mutation generation. צריך להחליט לפי
   cost, refusal behavior, output quality ו-reproducibility.
-- **OQ-0002:** rules with no obtainable ground-truth sample. זה משפיע ישירות על
+- **OQ-0002:** rules שאין עבורם ground-truth sample זמין. זה משפיע ישירות על
   denominator של robustness score.
 - **OQ-0003:** האם לכלול vendor-published rules. זה משפיע על scope,
   generalizability ו-disclosure complexity.
-- **OQ-0004:** corpus snapshot cutoff date. public repositories משתנים כל הזמן,
+- **OQ-0004:** תאריך cutoff עבור corpus snapshot. public repositories משתנים כל הזמן,
   ולכן צריך date קבוע.
-- **OQ-0005:** inter-rater reliability protocol for manual mutation review. זה
+- **OQ-0005:** protocol ל-inter-rater reliability עבור manual mutation review. זה
   קריטי ל-construct validity של functional equivalence.
 
 ## כלל עבודה
@@ -25,6 +25,6 @@ title: Open Questions
 
 אם שאלה חוסמת phase מסוים, היא צריכה להופיע גם ב-GitHub Project כ-blocker.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/OPEN-QUESTIONS.md

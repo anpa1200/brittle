@@ -1,8 +1,8 @@
 ---
-title: Code of Conduct
+title: כללי התנהגות
 ---
 
-# Code of Conduct
+# כללי התנהגות
 
 הפרויקט משתמש ב-Contributor Covenant v2.1.
 
@@ -17,6 +17,6 @@ security work ו-constructive feedback.
 - לדווח על security issues דרך SECURITY.md ולא ב-public issue.
 - לשמור על tone מקצועי גם כשיש disagreement.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/CODE_OF_CONDUCT.md

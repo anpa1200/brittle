@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Current",
+    "message": "נוכחי",
     "description": "The label for version current"
   },
   "sidebar.mainSidebar.category.Protocol": {
@@ -8,11 +8,11 @@
     "description": "The label for category 'Protocol' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Project Logs": {
-    "message": "Project Logs",
+    "message": "יומני פרויקט",
     "description": "The label for category 'Project Logs' in sidebar 'mainSidebar'"
   },
   "sidebar.mainSidebar.category.Community": {
-    "message": "Community",
+    "message": "קהילה",
     "description": "The label for category 'Community' in sidebar 'mainSidebar'"
   }
 }

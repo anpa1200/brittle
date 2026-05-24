@@ -1,8 +1,8 @@
 ---
-title: Decisions
+title: החלטות
 ---
 
-# Methodological Decision Log
+# יומן החלטות מתודולוגיות
 
 כל methodological decision צריך להופיע ב-`DECISIONS.md`. הגרסה העברית מסבירה את
 המטרה, אבל הקובץ האנגלי הוא המקור המחייב.
@@ -15,10 +15,10 @@ title: Decisions
 
 ## החלטות קיימות
 
-- **DEC-0001:** adopt pre-registered research protocol; lock before execution.
+- **DEC-0001:** אימוץ pre-registered research protocol ונעילה לפני execution.
   ההחלטה הזו אומרת שאין corpus collection, mutation generation, evaluator או
   analysis לפני שה-protocol ננעל.
-- **DEC-0002:** set initial public detection content scope for Phase R1.
+- **DEC-0002:** קביעת scope ראשוני ל-public detection content בשלב R1.
   ההחלטה הזו מגבילה את ה-scope הראשוני ל-public detection content שאפשר לבצע לו
   snapshot, לצטט אותו, ולנתח אותו בלי גישה proprietary.
 
@@ -35,6 +35,6 @@ title: Decisions
 
 לא מספיק לכתוב את ההחלטה ב-issue. היא חייבת להופיע גם ב-`DECISIONS.md`.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/DECISIONS.md

@@ -1,13 +1,13 @@
 ---
-title: Changelog
+title: יומן שינויים
 ---
 
-# Protocol Change Log
+# יומן שינויים ל-Protocol
 
 `CHANGELOG.md` מיועד לשינויים אחרי שה-protocol ננעל. לפני lock, שינויים גדולים
 עדיין יכולים להופיע שם אם הם חשובים ל-audit trail.
 
-## אחרי Protocol Lock
+## אחרי נעילת ה-Protocol
 
 כל שינוי צריך לכלול:
 
@@ -26,6 +26,6 @@ title: Changelog
 שינויים קטנים בניסוח לא תמיד משפיעים על pre-registration. שינויים במדדים,
 sampling, hypotheses או statistical methods כן יכולים להיות major.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/CHANGELOG.md

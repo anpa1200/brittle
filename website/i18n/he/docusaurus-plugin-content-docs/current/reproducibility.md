@@ -2,17 +2,17 @@
 title: Reproducibility
 ---
 
-# Reproducibility Checklist
+# רשימת בדיקה ל-reproducibility
 
 המחקר צריך להיות reproducible ככל האפשר, תחת מגבלות dual-use ו-restricted raw
 data.
 
-## Areas
+## תחומים
 
-- code reproducibility
-- data reproducibility
-- computation reproducibility
-- documentation reproducibility
+- reproducibility של code
+- reproducibility של data
+- reproducibility של computation
+- reproducibility של documentation
 - verification
 
 ## מה צריך להירשם
@@ -36,6 +36,6 @@ details ו-reference corpus ניתנים לשחזור או מוסברים במפ
 sanitized metadata, schema, hashes, access procedure או synthetic reference
 corpus.
 
-## Canonical Source
+## מקור מחייב
 
 https://github.com/anpa1200/brittle/blob/main/REPRODUCIBILITY.md
