@@ -60,8 +60,8 @@
 |-------|-------|
 | ID | OQ-0002 |
 | Date opened | 2026-05-24 |
-| Status | OPEN |
-| Resolved in | — |
+| Status | RESOLVED |
+| Resolved in | DEC-0006 |
 | Target phase | E2 |
 
 **Question:** How should the study handle detection rules for which a ground-truth positive sample (i.e., an artifact that triggers the rule) cannot be obtained — for example, rules targeting proprietary malware families, nation-state tooling, or deprecated infrastructure?
@@ -70,7 +70,7 @@
 
 **Stakes:** Directly affects the denominator of the robustness score (./protocol §4.3). If a large fraction of rules are untestable, the score's validity and the study's external validity are weakened.
 
-**Resolution:** —
+**Resolution:** Rules without an obtainable ground-truth-positive example are excluded from confirmatory robustness scoring and reported in the coverage funnel. The execution phase still measures how often this exclusion occurs.
 
 ---
 
@@ -80,8 +80,8 @@
 |-------|-------|
 | ID | OQ-0003 |
 | Date opened | 2026-05-24 |
-| Status | OPEN |
-| Resolved in | — |
+| Status | RESOLVED |
+| Resolved in | DEC-0006 |
 | Target phase | R5.2 |
 
 **Question:** Should the study corpus include vendor-published detection rules (e.g., CrowdStrike, Microsoft Sentinel built-ins, Palo Alto) in addition to community-published rules (SigmaHQ, Elastic, Splunk ES Content)?
@@ -90,7 +90,7 @@
 
 **Stakes:** Determines the corpus sampling frame (./protocol §5.2) and the generalizability claim in the paper. If excluded, the paper must be explicit about the community-only scope.
 
-**Resolution:** —
+**Resolution:** Phase 1 includes public, citable vendor-published rules only when they are part of the native Elastic or high-fidelity Sigma-to-Elastic confirmatory scope. Closed, managed-service-only, paid-only, or private vendor rule sets are excluded.
 
 ---
 
@@ -100,8 +100,8 @@
 |-------|-------|
 | ID | OQ-0004 |
 | Date opened | 2026-05-24 |
-| Status | OPEN |
-| Resolved in | — |
+| Status | RESOLVED |
+| Resolved in | DEC-0006 |
 | Target phase | R5.2 / E1 |
 
 **Question:** What date should be used as the corpus snapshot cutoff? Public detection repositories are continuously updated; any date chosen will be stale by the time the paper is published.
@@ -110,7 +110,7 @@
 
 **Stakes:** Affects corpus size, rule maturity analysis, reproducibility, and the temporal scope of the generalizability claim.
 
-**Resolution:** —
+**Resolution:** The Phase 1 corpus snapshot cutoff is `2026-05-25`. Later upstream changes are excluded from confirmatory Phase 1 unless the protocol is amended before lock.
 
 ---
 
@@ -120,8 +120,8 @@
 |-------|-------|
 | ID | OQ-0005 |
 | Date opened | 2026-05-24 |
-| Status | OPEN |
-| Resolved in | — |
+| Status | RESOLVED |
+| Resolved in | DEC-0006 |
 | Target phase | R5.7 |
 
 **Question:** What inter-rater reliability (IRR) protocol should be used for the manual review step that validates functional equivalence of LLM-generated mutations? How many raters, what background, what agreement metric, and what threshold constitutes acceptable reliability?
@@ -130,4 +130,4 @@
 
 **Stakes:** Directly affects construct validity (./protocol §6.4). IRR is often the weakest link in manual annotation studies. Must be decided before Phase E3.
 
-**Resolution:** —
+**Resolution:** Section 5.7 now requires a coding guide, reviewer-drift pilot, and an independent second reviewer for at least `300` mutation-review decisions with Cohen's kappa reported. If no independent second reviewer can be recruited before lock, confirmatory N must be downscoped and the remainder labeled exploratory.

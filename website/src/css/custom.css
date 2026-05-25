@@ -29,23 +29,3 @@
 .theme-doc-markdown h1 {
   letter-spacing: 0;
 }
-
-html[dir='rtl'] .theme-doc-markdown,
-html[dir='rtl'] .navbar,
-html[dir='rtl'] .footer {
-  text-align: right;
-}
-
-html[dir='rtl'] .table-of-contents {
-  border-left: 0;
-  border-right: 1px solid var(--ifm-toc-border-color);
-  padding-left: 0;
-  padding-right: var(--ifm-toc-padding-horizontal);
-}
-
-html[dir='rtl'] code,
-html[dir='rtl'] pre,
-html[dir='rtl'] kbd {
-  direction: ltr;
-  unicode-bidi: isolate;
-}

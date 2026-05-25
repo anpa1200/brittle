@@ -13,10 +13,6 @@
   padding: 72px 0;
 }
 
-:global(html[dir='rtl']) .heroInner {
-  text-align: right;
-}
-
 .status {
   color: #63c5da;
   font-size: 0.92rem;
@@ -52,10 +48,6 @@
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
-}
-
-:global(html[dir='rtl']) .actions {
-  justify-content: flex-start;
 }
 
 .focusSection {

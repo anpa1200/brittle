@@ -2,7 +2,7 @@
 
 ## Current Status: Protocol Phase — Not Accepting External Contributions
 
-BrittleBench is currently in the **research protocol phase** (Phase R1). The research protocol ([PROTOCOL.md](PROTOCOL.md)) is not yet locked, and no execution-phase code or data exists.
+BrittleBench is currently in the **pre-lock protocol review phase** (Phase R9). The research protocol ([PROTOCOL.md](PROTOCOL.md)) is not yet locked, and no confirmatory execution-phase code or data exists.
 
 **We are not accepting external contributions at this time.** This is deliberate: a solo-researcher pre-registration study requires that the methodology be developed independently before external input could introduce bias. Opening contributions before the protocol is locked would compromise the study's credibility.
 

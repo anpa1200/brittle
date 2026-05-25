@@ -1,6 +1,6 @@
 ---
 status: "DRAFT"
-last_updated: "2026-05-24"
+last_updated: "2026-05-25"
 ---
 
 # Glossary
@@ -10,11 +10,11 @@ definitions belong in [../PROTOCOL.md Section 4](./protocol#4-definitions-and-op
 
 | Term | Definition | Protocol Reference | Status |
 |------|------------|--------------------|--------|
-| Detection rule | TO BE FILLED — see Phase R4.1 of the research plan. | [§4.1](./protocol#41-detection-rule--formal-definition) | DRAFT |
-| Mutation | TO BE FILLED — define after functional equivalence and mutation strategy are specified. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
-| Functional equivalence | TO BE FILLED — see Phase R4.2 of the research plan. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
-| Robustness score | TO BE FILLED — see Phase R4.3 of the research plan. | [§4.3](./protocol#43-robustness-score--formal-definition) | DRAFT |
-| Brittleness pattern | TO BE FILLED — see Phase R4.4 of the research plan. | [§4.4](./protocol#44-brittleness-pattern--formal-definition) | DRAFT |
-| Ground truth sample | TO BE FILLED — define during Phase R4 and revisit OQ-0002. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
-| Evaluator | TO BE FILLED — define during Phase R5 methodology design. | [§5.1](./protocol#51-methodological-approach) | DRAFT |
-| Unit of analysis | TO BE FILLED — see Phase R4.5 of the research plan. | [§4.5](./protocol#45-unit-of-analysis) | DRAFT |
+| Detection rule | Machine-readable artifact that expresses conditions intended to identify malicious or suspicious behavior, file content, or event telemetry. Phase 1 confirmatory rules are limited to native YARA, native Elastic, and high-fidelity Sigma-to-Elastic translations. | [§4.1](./protocol#41-detection-rule--formal-definition) | DRAFT |
+| Mutation | Modified artifact or event representation derived from a parent ground-truth example for robustness testing. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
+| Functional equivalence | Property of a mutation that preserves the attacker-relevant behavior, same detection intent, same observable surface, and no novel capability relative to the parent example. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
+| Robustness score | Per-rule fraction of validated functionally equivalent mutations detected after the rule detects its original positive example. | [§4.3](./protocol#43-robustness-score--formal-definition) | DRAFT |
+| Brittleness pattern | Recurring failure mechanism where a validated equivalent mutation is missed because the rule depends on a narrow representation of the target behavior. | [§4.4](./protocol#44-brittleness-pattern--formal-definition) | DRAFT |
+| Ground truth sample | Original positive example that should be detected by the rule before any mutation result can be scored for that rule. | [§4.2](./protocol#42-functional-equivalence--formal-definition) | DRAFT |
+| Evaluator | Pinned validation environment used to execute or test a rule family, such as native YARA or self-managed Elastic/Kibana. | [§4.1](./protocol#41-detection-rule--formal-definition) | DRAFT |
+| Unit of analysis | Object over which measurements are made: rule, rule-mutation pair, rule-source group, or mutation class. | [§4.5](./protocol#45-unit-of-analysis) | DRAFT |

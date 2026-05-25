@@ -4,9 +4,10 @@ type: software
 title: "BrittleBench: A Defender's Audit of Public Detection Content Robustness"
 abstract: >
   A large-scale empirical study measuring how robust publicly-published detection
-  rules (Sigma, YARA, Elastic, Splunk) are when faced with LLM-generated functional
-  mutations of the attacks those rules are designed to detect. Produces a benchmark
-  dataset, an open-source toolkit, and a primary publication.
+  rules are when faced with LLM-generated functional mutations of the attacks
+  those rules are designed to detect. Confirmatory Phase 1 is scoped to native
+  YARA, native Elastic, and high-fidelity Sigma-to-Elastic rules. Produces a
+  benchmark dataset, an open-source toolkit, and a primary publication.
 authors:
   - family-names: Pautov
     given-names: Andrey
@@ -16,8 +17,8 @@ repository-code: "https://github.com/anpa1200/brittle"
 url: "https://github.com/anpa1200/brittle"
 license: MIT
 license-url: "https://github.com/anpa1200/brittle/blob/main/LICENSE"
-version: "0.1.0-scaffold"
-date-released: "2026-05-24"
+version: "1.0.0-protocol-lock"
+date-released: "2026-05-25"
 doi: "TO BE ASSIGNED UPON DATASET RELEASE"
 keywords:
   - detection engineering

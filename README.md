@@ -2,15 +2,15 @@
 
 **BrittleBench: A Defender's Audit of Public Detection Content Robustness**
 
-**Status:** ![Phase R1 — Pre-implementation](https://img.shields.io/badge/Phase-R1%20Pre--implementation-yellow)
+**Status:** ![Protocol Locked](https://img.shields.io/badge/Protocol-v1.0.0%20LOCKED-brightgreen)
 
 ---
 
 ## What is BrittleBench?
 
-BrittleBench is a large-scale empirical study measuring how robust publicly-published detection rules (Sigma, YARA, Elastic, Splunk) are when faced with LLM-generated functional mutations of the attacks those rules are designed to detect. The study produces (a) the first public benchmark dataset for detection robustness, (b) an open-source toolkit for any detection engineer to score their own rules, and (c) a primary publication reporting findings. This repository is currently in the **research protocol phase** — no implementation code exists yet, by design.
+BrittleBench is a large-scale empirical study measuring how robust publicly-published detection rules are when faced with LLM-generated functional mutations of the attacks those rules are designed to detect. Confirmatory Phase 1 is scoped to native YARA, native Elastic, and high-fidelity Sigma-to-Elastic rules. The study produces (a) a public benchmark dataset for detection robustness, (b) an open-source toolkit for detection engineers to score their own rules, and (c) a primary publication reporting findings. The research protocol is locked at `v1.0.0`; execution-phase work must follow the locked methodology.
 
-**Current phase:** [Phase R1 — Problem Definition](PROTOCOL.md)
+**Current phase:** [Protocol v1.0.0 — Locked](PROTOCOL.md)
 
 ---
 
@@ -18,7 +18,7 @@ BrittleBench is a large-scale empirical study measuring how robust publicly-publ
 
 - Quantify robustness distribution across a public detection content corpus
 - Identify failure-mode patterns (what kinds of mutations bypass what kinds of rules)
-- Compare robustness across detection repositories (SigmaHQ, Elastic, Splunk, etc.)
+- Compare robustness across eligible detection repositories and rule families
 - Investigate correlation between rule age, complexity, and brittleness
 - Produce a reusable benchmark methodology for the detection engineering field
 

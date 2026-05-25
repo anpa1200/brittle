@@ -7,13 +7,13 @@ const sidebars = {
       type: 'category',
       label: 'Protocol',
       collapsed: false,
-      items: ['protocol', 'research-plan', 'glossary', 'threats-to-validity'],
+      items: ['protocol', 'research-plan', 'preregistration-summary', 'rule-source-inventory', 'glossary', 'threats-to-validity'],
     },
     {
       type: 'category',
       label: 'Project Logs',
       collapsed: false,
-      items: ['decisions', 'open-questions', 'costs', 'changelog', 'reproducibility'],
+      items: ['decisions', 'open-questions', 'costs', 'changelog', 'reproducibility', 'local-corpus-build-scenario'],
     },
     {
       type: 'category',

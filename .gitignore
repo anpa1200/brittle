@@ -56,6 +56,8 @@ secrets*
 
 # Local-only data and caches
 data/cache/
+detection rules/
+local-rule-sources/
 tmp/
 *.tmp
 tmp/*.parquet
@@ -64,6 +66,7 @@ tmp/*.parquet
 
 # Execution outputs should be introduced deliberately after protocol lock.
 corpus/
+corpus-build/
 mutations/
 evaluators/
 results/

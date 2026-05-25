@@ -24,7 +24,7 @@
 
 | Date | Category | Vendor | Amount (USD) | Running Total | Notes |
 |------|----------|--------|-------------|---------------|-------|
-| — | — | — | — | $0.00 | No expenditures yet (Phase R1) |
+| — | — | — | — | $0.00 | No expenditures yet (pre-lock protocol phase) |
 
 ---
 
