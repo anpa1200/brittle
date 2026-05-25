@@ -11,9 +11,15 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Execution',
+      collapsed: false,
+      items: ['phase-e-pilot-plan', 'local-corpus-build-scenario'],
+    },
+    {
+      type: 'category',
       label: 'Project Logs',
       collapsed: false,
-      items: ['decisions', 'open-questions', 'costs', 'changelog', 'reproducibility', 'local-corpus-build-scenario'],
+      items: ['decisions', 'open-questions', 'costs', 'changelog', 'reproducibility'],
     },
     {
       type: 'category',

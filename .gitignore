@@ -64,15 +64,17 @@ tmp/*.parquet
 *.sqlite
 *.db
 
-# Execution outputs should be introduced deliberately after protocol lock.
-corpus/
+# Execution artifacts. Raw/data-heavy contents are ignored by default; tracked
+# README files document each directory contract after protocol lock.
+corpus/*
+!corpus/README.md
 corpus-build/
-mutations/
-evaluators/
-results/
-dataset/
-analysis/
-cli/
+mutations/*
+!mutations/README.md
+results/*
+!results/README.md
+dataset/*
+!dataset/README.md
 
 # LaTeX and paper build artifacts
 paper/build/

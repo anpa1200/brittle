@@ -1,9 +1,9 @@
-# Future Execution Artifacts
+# Execution Artifacts Archive Note
 
-This directory will host execution-phase artifacts once the research protocol is
-locked.
+The research protocol is now locked at `v1.0.0`, so the execution-phase
+directory skeleton has moved to the repository root.
 
-Expected future directories include:
+Active execution directories:
 
 - `corpus/`
 - `mutations/`
@@ -13,8 +13,5 @@ Expected future directories include:
 - `analysis/`
 - `cli/`
 
-Until [../PROTOCOL.md](../PROTOCOL.md) Section 9.1 reads `LOCKED`, no
-execution-phase code or data goes into this repository. This enforces the
-pre-registration discipline: research questions, hypotheses, operational
-definitions, methods, and disclosure rules must be fixed before implementation
-starts.
+This directory remains as an audit trail for the pre-lock repository structure.
+No new execution artifacts should be added here.
