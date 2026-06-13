@@ -8,6 +8,7 @@ const config = {
   url: 'https://anpa1200.github.io',
   baseUrl: '/brittle/',
 
+  scripts: [{src: 'https://1200km.com/assets/docusaurus-ecosystem.js?v=20260613-1', defer: true}],
   organizationName: 'anpa1200',
   projectName: 'brittle',
 
